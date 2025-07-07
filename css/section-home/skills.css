@@ -1,0 +1,80 @@
+.skills {
+    margin-top: 5%;
+    margin: 30px;
+    padding: 10px 10%;
+}
+
+.skills-text {
+    width: 100%;
+    margin: 20px 0;
+    font-size: small;
+    font-style: italic;
+    border-left: 10px solid rgb(255, 0, 0);
+    padding-left: 10px;
+}
+
+.square-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.square {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-square div,
+.lmid-square div,
+.rmid-square div,
+.right-square div {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    box-shadow: 5px 5px rgb(255, 0, 0);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.square div:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px black;
+}
+
+.square div i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: rgb(255, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+.square div i:hover {
+    color: rgb(0, 0, 0);
+}
+
+.square div p {
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+.square {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.left-square  { animation-delay: 0s;   }
+.lmid-square { animation-delay: 0.3s; }
+.rmid-square { animation-delay: 0.6s; }
+.right-square{ animation-delay: 0.9s; }

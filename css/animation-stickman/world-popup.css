@@ -1,0 +1,26 @@
+.world-popup {
+    position: fixed;
+    bottom: 30px; 
+    right: 50px;
+    width: 400px;
+    background: white;
+    border: 1px solid #00FF26;
+    box-shadow: 5px 5px rgba(0,0,0,0.1);
+    display: none; 
+    z-index: 9999;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.world-popup .left-side-world {
+    width: 100%;
+}
+
+.left-footer {
+    position: relative;
+}
+
+.left-footer:hover + .world-popup,
+.world-popup:hover {
+    display: block;
+}

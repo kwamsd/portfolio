@@ -1,0 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../../images/noise-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontMono);
+    height: 100%;
+}
+
+.left-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.right-side {
+    width: 60%;
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.right-side section {
+    margin-bottom: 3rem;
+}

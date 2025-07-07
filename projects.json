@@ -1,0 +1,124 @@
+[
+  {
+    "id": "01",
+    "title": "Fiche Technique Moto",
+    "description": "Un petit projet pédagogique développé avec Alpine.js pour afficher de manière interactive des fiches techniques de motos via l’API Ninjas.", 
+    "stack": ["Alpine.js", "API"],
+    "status": "Terminé",
+    "category": ["frontend", "web", "api"],
+    "links": {
+      "demo": "https://kwamsd.github.io/Fiche-technique-de-moto_ProjetAlpineJS/",
+      "github": "https://github.com/kwamsd/Fiche-technique-de-moto_ProjetAlpineJS"
+    },
+    "details": "",
+    "image": "../images/projets/alpinejs.png"
+  },
+  {
+    "id": "02",
+    "title": "Relatives Remembered",
+    "description": "Un site mémoriel interactif pour retracer et partager des histoires familiales de la Première Guerre mondiale, avec authentification Supabase.", 
+    "stack": ["Vue.js", "Node.js", "PostgreSQL"],
+    "status": "Terminé",
+    "category": ["fullstack", "web"],
+    "links": {
+      "demo": "https://relatives-remembered.vercel.app/",
+      "github": "https://github.com/kwamsd/Relatives-Remembered"
+    },
+    "details": "",
+    "image": "../images/projets/remembered.png"
+  },
+  {
+    "id": "03",
+    "title": "EliteFlixx - Streaming Platform",
+    "description": "Plateforme collaborative de streaming vidéo, construite avec Vue.js en front et Node.js en back, exploitant une API de films open source pour un catalogue dynamique.",
+    "stack": ["Vue.js", "Node.js", "API"],
+    "status": "Terminé",
+    "category": ["fullstack", "web", "api"],
+    "links": {
+      "demo": "https://eliteflixx.vercel.app/",
+      "github": "https://github.com/ibrahima-gh/Streaming_nodeJS"
+    },
+    "details": "",
+    "image": "../images/projets/streaming.png"
+  },
+  {
+    "id": "04",
+    "title": "Portfolio Personnel",
+    "description": "Site portfolio personnel animé et minimaliste présentant mes projets et compétences, avec animations CSS et police DepartureMono.",
+    "stack": ["HTML/CSS", "JavaScript"],
+    "status": "En cours",
+    "category": ["frontend", "web"],
+    "links": {
+      "demo": "#",
+      "github": "#"
+    },
+    "details": "",
+    "image": "../images/projets/portfolio.png"
+  },
+  {
+    "id": "05",
+    "title": "Donjon Java",
+    "description": "Jeu d’aventure textuel orienté objet en Java, simulant des combats tour par tour dans un donjon via Docker et TTYD.", 
+    "stack": ["Java 11", "Docker", "TTYD"],
+    "status": "Terminé",
+    "category": ["java"],
+    "links": {
+      "github": "https://github.com/kwamsd/Jeux-JAVA"
+    },
+    "details": "",
+    "image": "../images/projets/donjon-java.png"
+  },
+  {
+    "id": "06",
+    "title": "Story Generator",
+    "description": "Application Android pour enfants générant des histoires sur mesure via Java/Kotlin, avec mini-quiz pour valider la compréhension.",
+    "stack": ["Android", "Java 17", "Kotlin 1.9"],
+    "status": "Terminé",
+    "category": ["android"],
+    "links": {
+      "github": "https://github.com/kwamsd/story-generator"
+    },
+    "details": "",
+    "image": "../images/projets/story-generator.png"
+  },
+  {
+    "id": "07",
+    "title": "EliteLoc – Location Auto",
+    "description": "Plateforme web de location de voitures en ligne, conçue pour offrir une expérience simple, rapide et sécurisée (Fullstack Vue.js/Node.js avec Supabase).",
+    "stack": ["Vue 3", "Node.js", "Tailwind", "Supabase"],
+    "status": "Terminé",
+    "category": ["fullstack", "web"],
+    "links": {
+      "demo": "https://elite-loc.vercel.app",
+      "github": "https://github.com/kwamsd/EliteLoc"
+    },
+    "details": "",
+    "image": "../images/projets/elitloc.png"
+  },
+  {
+    "id": "08",
+    "title": "Vinyle Web – E-commerce",
+    "description": "Site e-commerce MVC en PHP/MySQL pour la vente de disques vinyles, avec pages catalogue, produit et panier.", 
+    "stack": ["PHP", "MySQL", "HTML/CSS"],
+    "status": "Terminé",
+    "category": ["php", "web"],
+    "links": {
+      "github": "https://github.com/kwamsd/vinyle-web"
+    },
+    "details": "",
+    "image": "../images/projets/vinyle-web.png"
+  },
+  {
+    "id": "09",
+    "title": "Bank Management",
+    "description": "Application Symfony/PostgreSQL de gestion bancaire, permettant dépôts, retraits, transferts et supervision admin via un dashboard analytique.", 
+    "stack": ["Symfony", "PostgreSQL", "PHP"],
+    "status": "Terminé",
+    "category": ["php", "fullstack"],
+    "links": {
+      "github": "https://github.com/kwamsd/Bank-Management"
+    },
+    "details": "",
+    "image": "../images/projets/bank-management.png"
+  }
+]

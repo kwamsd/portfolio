@@ -1,0 +1,31 @@
+.left-side-titres {
+    gap: 5px;
+}
+
+.left-side h1 {
+    font-size: 3.2rem;
+    margin-bottom: 4px;
+}
+
+.left-side h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.left-side h2 a {
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(183, 183, 183);
+    transition: 0.5s ease-in-out;
+}
+
+.left-side h2 a:hover {
+    color: rgb(114, 114, 114);
+}
+
+.left-side h3 {
+    font-size: medium;
+    color: rgb(255, 0, 0);
+    min-width: 250px; 
+    display: inline-block;
+}
