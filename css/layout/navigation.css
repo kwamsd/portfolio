@@ -31,3 +31,22 @@
     color: rgba(255, 0, 0, 1);
     border-left: 5px solid red;
 }
+
+@media (max-width:1024px){
+  .left-side-nav ul{
+    display:flex;
+    justify-content:space-around;
+    gap:clamp(8px,2vw,24px);
+  }
+  .left-side-nav li{
+    width:auto;
+  }
+  .left-side-nav a{
+    border-left:none;
+    border-bottom:3px solid transparent;
+  }
+  .left-side-nav a:hover,
+  .left-side-nav a.active{
+    border-bottom-color:red;
+  }
+}

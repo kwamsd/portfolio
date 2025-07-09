@@ -36,3 +36,43 @@ body {
 .right-side section {
     margin-bottom: 3rem;
 }
+
+/* ---------- GLOBAL SPACING ---------- */
+:root{
+  --gutter-inline: clamp(16px, 4vw, 40px);
+  --section-margin-block: 3rem;
+}
+
+/* bloc central desktop */
+.right-side section{
+  margin-block-end: var(--section-margin-block);
+  padding-inline: var(--gutter-inline);
+}
+
+/* ------------- RESPONSIVE 0 – 1024 px ------------- */
+@media (max-width:1024px){
+  body{
+    
+    flex-direction: column;
+  }
+
+  
+  .left-side{
+    position: static;
+    width: 100%;
+    height: auto;
+    padding-inline: var(--gutter-inline);
+    padding-block: 2rem;
+  }
+
+  .right-side{
+    width: 100%;
+    margin-left: 0;
+    overflow: visible;    
+  }
+
+  .right-side section{
+    margin-block-end: calc(var(--section-margin-block) * .75); 
+    padding-inline: var(--gutter-inline);
+  }
+}

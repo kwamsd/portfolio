@@ -79,3 +79,25 @@ footer {
     background: rgb(255, 255, 255);
     border: 1px solid rgba(159, 159, 159, 0.464);
 }
+
+@media (max-width:1024px){
+  footer{
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    font-size:.8rem;
+  }
+  .left-footer,
+  .middle-footer,
+  .right-footer{
+    width:100%;
+    justify-content:center;
+    margin:4px 0;
+    padding-block:4px;
+    border:none;
+  }
+  .middle-footer,
+  .right-footer{
+    border-left:none;
+  }
+}

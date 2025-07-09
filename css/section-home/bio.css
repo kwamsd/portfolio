@@ -5,7 +5,7 @@
 }
 
 .bio-titre {
-    font-size: xx-large;
+    font-size: 1.2rem;
     max-width: 100%;
     margin-bottom: 20px;
 }
@@ -16,7 +16,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1rem;
     transition: 0.5s ease-in-out;
     text-shadow: 3px 3px 3px rgb(255, 255, 255);
 }
@@ -25,4 +25,13 @@
     color: rgb(255, 0, 0);
     font-weight: 500;
     font-style: italic;
+}
+
+@media (max-width:1024px){
+  .bio{
+    margin-block:var(--section-margin-block);
+    margin-inline:0;
+    padding-inline:var(--gutter-inline);
+  }
+  .bio-text{font-size:.95rem;}
 }

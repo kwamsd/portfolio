@@ -7,7 +7,7 @@
 .skills-text {
     width: 100%;
     margin: 20px 0;
-    font-size: small;
+    font-size: 1rem;
     font-style: italic;
     border-left: 10px solid rgb(255, 0, 0);
     padding-left: 10px;
@@ -60,7 +60,7 @@
 }
 
 .square div p {
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-align: center;
     margin: 0;
 }
@@ -78,3 +78,16 @@
 .lmid-square { animation-delay: 0.3s; }
 .rmid-square { animation-delay: 0.6s; }
 .right-square{ animation-delay: 0.9s; }
+
+@media (max-width:1024px){
+  .square-box{
+    flex-wrap:wrap;                 
+    gap:clamp(12px,4vw,20px);
+  }
+  .square div{
+    width:130px;
+    height:130px;
+  }
+  .skills{margin-inline:0;padding-inline:var(--gutter-inline);}
+  .skills-text{font-size:.9rem;border-left-width:6px;}
+}

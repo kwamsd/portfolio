@@ -43,7 +43,7 @@
     height: 40px;
     border: none;
     background-color: rgba(0, 0, 0, 0);
-    font-size: large;
+    font-size: 1.5rem;
     align-items: center;
     justify-content: center;
 }
@@ -65,8 +65,11 @@
 
 .projects-img {
     margin: 20px;
-    width: 300px;
-    height: 145px;
+    padding: 20px;
+    /* width: 300px; */
+    /* height: 145px; */
+    width: 100%;
+    height: 45%;
 }
 
 .projects-img img {
@@ -78,7 +81,10 @@
     display: flex;
     flex-direction: row;
     margin: 20px;
-    width: 300px;
+    padding: 20px;
+    /* width: 300px; */
+    width: 100%;
+    height: 45%;
 }
 
 .projects-stack {
@@ -94,7 +100,7 @@
 }
 
 .projects-stack p {
-    font-size: xx-small;
+    font-size: 0.5rem;
     font-style: italic;
     padding: 10px;
     text-align: center;
@@ -116,7 +122,8 @@
 .projects-text p {
     font-family: "Inter", sans-serif;
     color: black;
-    font-size: x-small;
+    padding: 3px;
+    font-size: 1rem;
     text-align: justify;
     overflow: auto;
 }
@@ -183,4 +190,60 @@
 
 .projects-slide::-webkit-scrollbar-thumb:hover {
     background: rgb(255, 0, 0);
+}
+
+@media (max-width: 1024px) {
+  /* 1. Cards adaptatives */
+  .projects-card {
+    width: 100%;
+    max-width: none;
+    height: auto;           
+    margin-bottom: 2rem;    
+  }
+
+  /* 2. Images et description en auto */
+  .projects-img {
+    width: 100%;
+    height: auto;           
+    margin: 0;              
+    padding: 0;             
+  }
+  .projects-description {
+    display: flex;
+    flex-direction: column; 
+    height: auto;           
+    margin: 0;
+    padding: 1rem 0;
+  }
+  .projects-stack {
+    width: 100%;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .projects-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 3. Plus de slider, affichage en colonne */
+  .projects-slide {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;      
+    gap: 2rem;              
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* 4. On cache la pagination */
+  .pagination {
+    display: none !important;
+  }
+
+  /* Bouton “Voir tout” full width */
+  .bouton-all-projects {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
