@@ -1,3 +1,24 @@
+function openModal(videoUrl, title) {
+  const modal = document.getElementById('video-modal');
+  document.getElementById('modal-video').src = videoUrl;
+  document.getElementById('modal-title').textContent = "Démonstration du projet : " + title;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  const modal = document.getElementById('video-modal');
+  document.getElementById('modal-video').pause();
+  document.getElementById('modal-video').src = "";
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('close-modal').onclick = closeModal;
+document.getElementById('video-modal').onclick = function (e) {
+  if (e.target === this) closeModal();
+};
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+
 // ========== toggle les détails
 function toggleDetails(row) {
   const details = row.nextElementSibling;
@@ -42,23 +63,32 @@ fetch('../projects.json')
           <span>${proj.status}</span>
         </div>
         <div class="project-links">
-          ${proj.links.demo ? `<a href="${proj.links.demo}" target="_blank" onclick="event.stopPropagation()"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>` : ''}
-          ${proj.links.github ? `<a href="${proj.links.github}" target="_blank" onclick="event.stopPropagation()"><i class="fa-brands fa-github"></i></a>` : ''}
-        </div>
+  ${proj.links.demo ? `
+      <a href="${proj.links.demo}" target="_blank" onclick="event.stopPropagation()">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    `
+          : proj.video ?
+            `<a href="#" class="video-btn" data-video="${proj.video}" data-title="${proj.title}" onclick="event.stopPropagation(); return false;">
+        <i class="fa-solid fa-play"></i>
+      </a>`
+            : ''
+        }
+  ${proj.links.github ? `
+      <a href="${proj.links.github}" target="_blank" onclick="event.stopPropagation()">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    ` : ''}
+</div>
       `;
 
-      // détails cachés
-      // const detail = document.createElement('div');
-      // detail.className = 'project-details';
-      // detail.innerHTML = `
-      //   <div class="project-details-content">
-      //     <h4>Description détaillée</h4>
-      //     <p>${proj.details}</p>
-      //   </div>
-      // `;
-
       container.appendChild(row);
-      // container.appendChild(detail);
+      document.querySelectorAll('.video-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openModal(this.getAttribute('data-video'), this.getAttribute('data-title'));
+        });
+      });
     });
 
     // filtres

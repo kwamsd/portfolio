@@ -49,8 +49,8 @@
     "status": "En cours",
     "category": ["frontend", "web"],
     "links": {
-      "demo": "#",
-      "github": "#"
+      "demo": "https://kwamehdhegbo.com",
+      "github": "https://github.com/kwamsd/portfolio"
     },
     "details": "",
     "image": "../images/projets/portfolio.png"
@@ -65,6 +65,7 @@
     "links": {
       "github": "https://github.com/kwamsd/Jeux-JAVA"
     },
+    "video": "../videos/jeux-java_screen.mp4",
     "details": "",
     "image": "../images/projets/donjon-java.png"
   },
@@ -105,6 +106,7 @@
     "links": {
       "github": "https://github.com/kwamsd/vinyle-web"
     },
+    "video": "../videos/vinyle-web_screen.mp4",
     "details": "",
     "image": "../images/projets/vinyle-web.png"
   }

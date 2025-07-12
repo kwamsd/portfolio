@@ -65,6 +65,13 @@
 </head>
 
 <body>
+    <div id="video-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-modal" id="close-modal">&times;</span>
+        <h2 id="modal-title"></h2>
+        <video id="modal-video" controls style="width:100%;max-height:60vh;background:#000;"></video>
+    </div>
+</div>
     <header class="left-side">
         <section class="left-side-titres">
             <h1>Kwameh DHEGBO</h1>
@@ -89,7 +96,8 @@
                 par la fusion du design et de la technologie.
                 J’aime autant façonner des interfaces claires et attractives que concevoir la logique qui fait
                 fonctionner les applications.
-                Ce qui me motive vraiment, c’est de voir les données prendre vie, surtout lorsqu’il s’agit de sport, plus particulièment
+                Ce qui me motive vraiment, c’est de voir les données prendre vie, surtout lorsqu’il s’agit de sport,
+                plus particulièment
                 <strong> le football américain et la F1</strong>.
                 <br><br>
                 J’aime manipuler des bases de données, tester des APIs, et construire des interfaces qui rendent
@@ -107,6 +115,7 @@
             </p>
         </section>
         <section class="skills" id="competences">
+            <p class="skills-title">Mes compétences clés</p>
             <div class="square-box">
                 <div class="square left-square">
                     <div>
@@ -122,7 +131,7 @@
                         <p>Méthodique</p>
                     </div>
                     <div>
-                        <i class="fa-brands fa-php"></i>
+                        <i class="fa-brands fa-symfony"></i>
                         <p>Symfony</p>
                     </div>
                 </div>
@@ -183,8 +192,8 @@
         </section>
 
         <section class="projects" id="projets">
+            <p class="projects-title">Mes projets</p>
             <div class="projects-slide" id="home-projects"></div>
-
             <div class="pagination">
                 <div class="pagination-cube active"></div>
                 <div class="pagination-cube"></div>
@@ -197,6 +206,8 @@
         </section>
 
         <section id="contact" class="content-section">
+
+            <p class="contact-title">où me trouver</p>
             <div class="network">
                 <div><i class="fa-brands fa-linkedin"
                         onclick="window.open('https://www.linkedin.com/in/kwameh-dhegbo-9b779420a/', '_blank')"></i><a

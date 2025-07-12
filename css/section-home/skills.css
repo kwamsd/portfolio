@@ -4,11 +4,23 @@
     padding: 10px 10%;
 }
 
+.skills-title {
+    font-size: 2rem;
+    margin: 2em 0;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .skills-text {
     width: 100%;
     margin: 20px 0;
     font-size: 1rem;
     font-style: italic;
+    font-weight:200;
+    color: black;
+    font-family: "Inter", sans-serif;
     border-left: 10px solid rgb(255, 0, 0);
     padding-left: 10px;
 }
@@ -34,7 +46,7 @@
     width: 150px;
     height: 150px;
     background-color: white;
-    border: 1px solid black;
+    border: 2px solid black;
     margin: 5px;
     box-shadow: 5px 5px rgb(255, 0, 0);
     transition: 0.3s ease-in-out;

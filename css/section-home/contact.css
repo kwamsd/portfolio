@@ -3,6 +3,14 @@
     background-color: rgba(255, 255, 255, 0);
     padding: 20px;
 }
+.contact-title {
+    font-size: 2rem;
+    margin: 2em 0;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-align: center;
+}
 
 .network {
     display: flex;
@@ -14,7 +22,7 @@
 .network div {
     display: flex;
     flex-direction: column;
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .network div i {
@@ -29,23 +37,24 @@
     justify-content: center;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 .network div a {
     text-decoration: none;
-    font-family: "Inter", sans-serif;
+    /* font-family: "Inter", sans-serif; */
     font-size: 1rem;
     font-style: italic;
     text-transform: uppercase;
-    color: rgb(255, 117, 117);
+    color: rgb(255, 0, 0);
     padding: 15px;
     transition: 0.5s ease-in-out;
     text-align: center;
 }
 
-.network div i:hover {
+/* .network div i:hover {
     color: rgb(255, 255, 255);
-}
+} */
 
 .network div a:hover {
     color: rgb(0, 0, 0);
@@ -67,15 +76,16 @@
     padding: 20px;
     margin: 0 5rem;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 .CV button {
     position: relative;
     padding: 20px 50px;
+    font-family: var(--fontMono);
     background-color: transparent;
     color: rgb(255, 0, 0);
-    border: 1px dashed rgb(255, 0, 0);
+    border: 2px dashed rgb(255, 0, 0);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
 }

@@ -1,15 +1,19 @@
 .left-side-nav {
     width: 100%;
-    padding: 10px 0;
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
     box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-    margin-right: 5% ;
+    background: transparent;
+    /* border-left: 4px solid #ff0000; */
 }
 
 .left-side-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .left-side-nav li {
@@ -18,35 +22,72 @@
 
 .left-side-nav a {
     display: block;
-    padding: 10px 20px;
+    padding: 14px 24px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size: small;
+    color: #111;
+    font-size: 1.06rem;
+    font-family: var(--fontMono, "Inter", sans-serif);
+    letter-spacing: 0.03em;
     border-left: 5px solid transparent;
-    transition: 0.3s ease-in-out;
+    transition: color 0.25s, border-left-color 0.3s, background 0.25s;
+    background: none;
+    font-weight: 500;
 }
 
 .left-side-nav a:hover,
 .left-side-nav a.active {
-    color: rgba(255, 0, 0, 1);
-    border-left: 5px solid red;
+    color: #ff0000;
+    border-left: 5px solid #ff0000;
+    background: linear-gradient(90deg, #fff6f6 0 90%, transparent 100%);
 }
 
+/* --- RESPONSIVE NAVIGATION HORIZONTAL --- */
 @media (max-width:1024px){
+  .left-side-titres{
+    border-bottom-width: 2px;
+    padding-bottom: 9px;
+    margin-bottom: 18px;
+    /* position: sticky; */
+  }
+  .left-side h1{font-size:2.2rem;}
+  .left-side h2{font-size:1.1rem;}
+  .left-side h3{font-size:0.9rem;}
+  
+  .left-side-nav {
+    border-left: none;
+    border-top: 3px solid #ff0000;
+    /* margin: 14px 0 0 0; */
+    padding-top: 6px;
+    position: fixed;
+    top: 0; 
+    left: 0; /
+    width: 100vw;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+    box-shadow: 0 2px 20px 0 #0002;
+    transition: background 0.3s;
+  }
   .left-side-nav ul{
-    display:flex;
-    justify-content:space-around;
-    gap:clamp(8px,2vw,24px);
+    flex-direction: row;
+    justify-content: space-around;
+    gap: clamp(6px, 3vw, 22px);
   }
   .left-side-nav li{
-    width:auto;
+    width: auto;
   }
   .left-side-nav a{
-    border-left:none;
-    border-bottom:3px solid transparent;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    padding: 12px 6px 7px 6px;
+    font-size: 1rem;
+    text-align: center;
   }
   .left-side-nav a:hover,
   .left-side-nav a.active{
-    border-bottom-color:red;
+    border-bottom: 4px solid #ff0000;
+    color: #ff0000;
+    background: transparent;
   }
 }
