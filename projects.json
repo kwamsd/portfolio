@@ -107,18 +107,5 @@
     },
     "details": "",
     "image": "../images/projets/vinyle-web.png"
-  },
-  {
-    "id": "09",
-    "title": "Bank Management",
-    "description": "Application Symfony/PostgreSQL de gestion bancaire, permettant dépôts, retraits, transferts et supervision admin via un dashboard analytique.", 
-    "stack": ["Symfony", "PostgreSQL", "PHP"],
-    "status": "Terminé",
-    "category": ["php", "fullstack"],
-    "links": {
-      "github": "https://github.com/kwamsd/Bank-Management"
-    },
-    "details": "",
-    "image": "../images/projets/bank-management.png"
   }
 ]

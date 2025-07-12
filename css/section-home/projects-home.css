@@ -1,3 +1,4 @@
+/* Projects container and cards */
 .projects {
     display: flex;
     flex-direction: column;
@@ -8,8 +9,8 @@
 .projects-slide {
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    overflow-x: scroll;
+    justify-content: flex-start;
+    overflow-x: auto;
     padding: 20px 0;
     margin-top: 20px;
     gap: 30px;
@@ -17,117 +18,107 @@
 
 .projects-card {
     width: 350px;
-    height: 440px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid rgba(184, 184, 184, 0.311);
     background-color: rgb(255, 255, 255);
     transition: 0.5s ease-in-out;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 12px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
-
 .projects-card:hover {
     border: 1px solid rgba(255, 0, 0, 0.342);
     transform: scale(1.01);
     box-shadow: 1px 1px rgba(255, 0, 0, 0.314);
 }
 
-.projects-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px;
-    gap: 20px;
-}
-
-.projects-links button {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 1.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.projects-links button a i {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    transition: 0.3s ease-in-out;
-}
-
-.projects-links button a i:hover {
-    color: rgb(255, 0, 0);
-}
-
-.projects-links button a:visited {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
+/* Image section */
 .projects-img {
-    margin: 20px;
-    padding: 20px;
-    /* width: 300px; */
-    /* height: 145px; */
     width: 100%;
-    height: 45%;
+    height: auto;
+    flex-shrink: 0;
 }
-
 .projects-img img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
+/* Description section */
 .projects-description {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    padding: 20px;
-    /* width: 300px; */
+    gap: 8px;
+    margin-top: 1em;
     width: 100%;
-    height: 45%;
 }
-
 .projects-stack {
     display: flex;
     flex-direction: column;
-    color: white;
-    height: 100%;
-    justify-content: start;
     align-items: center;
-    margin-right: 4px;
-    width: 20%;
+    justify-content: flex-start;
     background-color: black;
+    color: white;
+    padding: 8px;
+    width: 20%;
+    flex-shrink: 0;
 }
-
 .projects-stack p {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-style: italic;
-    padding: 10px;
+    padding: 4px;
     text-align: center;
     text-transform: lowercase;
     transition: 0.3s ease-in-out;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid white;
+    margin: 0;
 }
-
 .projects-stack p:hover {
     color: rgb(142, 142, 142);
 }
-
 .projects-text {
-    margin-left: 5%;
+    flex: 1 1 auto;
     width: 80%;
-    height: auto;
 }
-
 .projects-text p {
     font-family: "Inter", sans-serif;
     color: black;
-    padding: 3px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: justify;
+    margin: 0;
     overflow: auto;
 }
 
+/* Links section */
+.projects-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+.projects-links button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+    padding: 4px;
+}
+.projects-links button a i {
+    color: black;
+}
+.projects-links button a i:hover {
+    color: var(--accent-red);
+}
+
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
@@ -135,7 +126,6 @@
     gap: 10px;
     margin: 20px;
 }
-
 .pagination-cube {
     width: 10px;
     height: 10px;
@@ -143,107 +133,97 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .pagination-cube.active {
     background-color: red;
 }
 
+/* "Voir tout" button */
 .bouton-all-projects {
     width: 50%;
     text-align: left;
     padding: 10px;
-    text-decoration: none;
     color: black;
-    background-color: white;
+    background-color: var(--bg-white);
     border: 1px solid rgba(134, 134, 134, 0.111);
-    transition: 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: 0.3s ease-in-out;
+    margin: 0 auto;
 }
-
 .bouton-all-projects:hover {
-    color: rgb(255, 0, 0);
-    border: 1px solid rgb(255, 99, 99);
+    color: var(--accent-red);
+    border-color: rgb(255, 99, 99);
 }
 
-/* Scrollbar */
+/* Scrollbar styling */
 .projects-slide {
     scrollbar-width: thin;
-    scrollbar-color: rgb(255, 0, 0);
+    scrollbar-color: var(--accent-red) #E0E0E0;
 }
-
 .projects-slide::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
-
 .projects-slide::-webkit-scrollbar-track {
     background: #E0E0E0;
     border-radius: 10px;
 }
-
 .projects-slide::-webkit-scrollbar-thumb {
-    color: rgb(255, 99, 99);
+    background-color: rgb(255, 99, 99);
     border-radius: 10px;
 }
-
 .projects-slide::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 0, 0);
+    background: var(--accent-red);
 }
 
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  /* 1. Cards adaptatives */
-  .projects-card {
-    width: 100%;
-    max-width: none;
-    height: auto;           
-    margin-bottom: 2rem;    
-  }
-
-  /* 2. Images et description en auto */
-  .projects-img {
-    width: 100%;
-    height: auto;           
-    margin: 0;              
-    padding: 0;             
-  }
-  .projects-description {
-    display: flex;
-    flex-direction: column; 
-    height: auto;           
-    margin: 0;
-    padding: 1rem 0;
-  }
-  .projects-stack {
-    width: 100%;
-    flex-direction: row;    
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-  }
-  .projects-text {
-    width: 100%;
-    margin: 0;
-  }
-
-  /* 3. Plus de slider, affichage en colonne */
-  .projects-slide {
-    display: flex;
-    flex-direction: column;
-    overflow: visible;      
-    gap: 2rem;              
-    padding: 0;
-    margin-top: 0;
-  }
-
-  /* 4. On cache la pagination */
-  .pagination {
-    display: none !important;
-  }
-
-  /* Bouton “Voir tout” full width */
-  .bouton-all-projects {
-    width: 100%;
-    margin-top: 2rem;
-  }
+    .projects-card {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding: 16px;
+    }
+    .projects-img {
+        order: 1;
+        width: 100%;
+        height: auto;
+        margin-bottom: 12px;
+    }
+    .projects-description {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .projects-stack {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px;
+        width: 100%;
+    }
+    .projects-text {
+        width: 100%;
+    }
+    .projects-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 12px;
+    }
+    .projects-slide {
+        flex-direction: column;
+        overflow: visible;
+        gap: 2rem;
+        padding: 0;
+        margin-top: 0;
+    }
+    .pagination {
+        display: none !important;
+    }
+    .bouton-all-projects {
+        width: 100%;
+        margin-top: 2rem;
+    }
 }
