@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typedTextEl = document.getElementById("typed-text");
     if (texts.length) setTimeout(type, newTextDelay);
 
-    
+
     function updateMachineTime() {
         const now = new Date();
         const h = now.getHours().toString().padStart(2, "0");
@@ -82,7 +82,7 @@ window.addEventListener('scroll', () => {
 
 const slides = document.querySelector('.projects-slide');
 const cubes = document.querySelectorAll('.pagination-cube');
-const cardWidth = 380; 
+const cardWidth = 380;
 
 cubes.forEach((cube, index) => {
     cube.addEventListener('click', () => {
@@ -108,7 +108,7 @@ greenButton.addEventListener('mouseenter', () => {
 greenButton.addEventListener('mouseleave', () => {
     setTimeout(() => {
         worldPopup.style.display = 'none';
-    }, 300); 
+    }, 300);
 });
 
 worldPopup.addEventListener('mouseenter', () => {
@@ -117,4 +117,16 @@ worldPopup.addEventListener('mouseenter', () => {
 
 worldPopup.addEventListener('mouseleave', () => {
     worldPopup.style.display = 'none';
+});
+
+//M.A.J année
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+//parallax
+window.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    document.documentElement.style.setProperty('--x', x);
+    document.documentElement.style.setProperty('--y', y);
 });

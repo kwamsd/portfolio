@@ -54,7 +54,6 @@
     <link rel="stylesheet" href="css/section-home/contact.css">
     <link rel="stylesheet" href="css/animation-stickman/world-popup.css">
     <link rel="stylesheet" href="css/animation-stickman/animation.css">
-    <!-- <link rel="stylesheet" href="css/layout/mordern-override.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
@@ -82,7 +81,7 @@
             </div>
             <div class="header-content">
                 <h1 class="header-title">KWAMEH<br>DHEGBO</h1>
-                <div class="header-separator"></div> 
+                <div class="header-separator"></div>
                 <div class="header-infos">
                     <p>
                         Étudiant en développement web à
@@ -101,7 +100,7 @@
                 <li><a href="#bio" class="active">BIO</a></li>
                 <li><a href="#competences">COMPETENCES</a></li>
                 <li><a href="#projets">PROJETS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#contact">CONTACT & CV</a></li>
             </ul>
         </nav>
     </header>
@@ -202,7 +201,8 @@
 
             <p class="skills-text">
                 Des savoir-faire et des savoir-être que j’ai acquis au fil de <span onclick="location.href='#CV'"
-                    style="font-style: oblique; text-decoration: underline; cursor: pointer;">mes expériences</span>,
+                    style="font-style: oblique; font-weight: 600; text-decoration: underline; cursor: pointer;">mes
+                    expériences</span>,
                 que je
                 mets en pratique et continue de développer au quotidien.
             </p>
@@ -261,13 +261,17 @@
                         rel="noopener">JavaScript</a></strong>.
                 L’animation stickman inspiré de ce
                 <a href="https://codepen.io/JeromeRenders/pen/adEVja" target="_blank"
-                    rel="noopener"><strong>CodePen</strong></a>.
+                    rel="noopener"><strong>CodePen</strong></a>. De même pour l'effet parallax reproduit grâce à ce <a
+                    href="https://codepen.io/matt-cannon/pen/wBaBQvo"target="_blank"
+                    rel="noopener"><strong>CodePen.</strong></a>
                 La police utilisée est
                 <a href="https://departuremono.com/" target="_blank" rel="noopener"><strong>Departure Mono</strong></a>,
                 une fonte monospaced pixel de <a href="https://www.helenazhang.com/" target="_blank"
                     rel="noopener"><strong>Helena ZHANG</strong></a>.
                 Merci de pour visite !
+                <br>
             </p>
+            <p class="year">© 2025 - <span id="year"></span></p>
         </div>
     </footer>
     <div class="world-popup">
@@ -321,14 +325,6 @@
     </div>
     <script src="./script/script-home.js"></script>
     <script src="./script/script.js"></script>
-    <script>
-        window.addEventListener('mousemove', e => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 2;
-            const y = (e.clientY / window.innerHeight - 0.5) * 2;
-            document.documentElement.style.setProperty('--x', x);
-            document.documentElement.style.setProperty('--y', y);
-        });
-    </script>
 </body>
 
 </html>

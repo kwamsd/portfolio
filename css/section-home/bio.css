@@ -19,7 +19,7 @@
 }
 
 .bio-text{
-  font-family:"Inter",sans-serif;
+  /* font-family:"Inter",sans-serif; */
   font-size:clamp(.95rem,2vw,1rem);
   color:#222;
   text-align:justify;

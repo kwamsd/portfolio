@@ -16,7 +16,6 @@ footer {
 }
 
 .left-footer,
-.middle-footer,
 .right-footer {
     display: flex;
     flex-direction: row;
@@ -26,7 +25,6 @@ footer {
     transition: 0.6s ease-in-out;
 }
 
-.middle-footer,
 .right-footer {
     border-left: 2px solid rgb(0, 0, 0);
     padding-left: 10px;
@@ -34,11 +32,7 @@ footer {
 
 .left-footer {
     width: 20%;
-}
-
-.middle-footer {
-    width: 20%;
-    font-family: var(--fontMono);
+    padding-right: 10px;
 }
 
 .right-footer {
@@ -53,8 +47,11 @@ footer {
 
 .right-footer a {
     text-decoration: none;
-    transition: 0.6s ease-in-out;
-    color: rgb(255, 99, 99);
+    transition: 0.2s ease-in-out;
+    color: rgb(255, 165, 165);
+}
+.right-footer a:hover {
+    color: rgb(255, 0, 0);
 }
 
 .links-footer {
@@ -85,26 +82,11 @@ footer {
     border: 1px solid rgba(159, 159, 159, 0.464);
 }
 
+.year{
+    border-left: 2px solid black;
+}
 @media (max-width:1024px) {
-    footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        font-size: .8rem;
-    }
-
-    .left-footer,
-    .middle-footer,
-    .right-footer {
-        width: 100%;
-        justify-content: center;
-        margin: 4px 0;
-        padding-block: 4px;
-        border: none;
-    }
-
-    .middle-footer,
-    .right-footer {
-        border-left: none;
+    .green-button-footer{
+        display: none;
     }
 }
