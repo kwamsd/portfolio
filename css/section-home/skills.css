@@ -1,7 +1,9 @@
 .skills {
     margin-top: 5%;
-    margin: 30px;
-    padding: 10px 10%;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto 2rem auto;
+    /* padding: 10px 10%; */
 }
 
 .skills-title {
@@ -19,10 +21,15 @@
     font-size: 1rem;
     font-style: italic;
     font-weight:200;
-    color: black;
+    color: rgb(255, 0, 0);
+    text-align: center;
     font-family: "Inter", sans-serif;
-    border-left: 10px solid rgb(255, 0, 0);
-    padding-left: 10px;
+    /* border-left: 10px solid rgb(255, 0, 0);
+    border-right: 10px solid rgb(255, 0, 0); */
+
+    border: 5px solid rgba(255, 0, 0, 0.28);
+    border-radius: var(--radius);
+    padding: 10px;
 }
 
 .square-box {
@@ -54,6 +61,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: var(--radius);
 }
 
 .square div:hover {

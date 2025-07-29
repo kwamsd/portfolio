@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'DepartureMono';
-    src: url('../fonts/DepartureMono-1.500/DepartureMono-Regular.woff2') format('woff2'),
-         url('../fonts/DepartureMono-1.500/DepartureMono-Regular.woff') format('woff');
-}
-
-:root {
-    --fontMono: 'DepartureMono';
-}

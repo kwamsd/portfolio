@@ -1,78 +1,43 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-    background-image: url(../../images/noise-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--fontMono);
-    height: 100%;
+  margin: 0;
+  font-family: var(--fontMono);
+  /* background-image: url(../../images/noise-bg.png); */
+  background: #fffced;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #222;
 }
 
-.left-side {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    box-sizing: border-box;
-}
-
-.right-side {
-    width: 60%;
-    margin-left: 40%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.right-side section {
-    margin-bottom: 3rem;
-}
-
-/* ---------- GLOBAL SPACING ---------- */
-:root{
-  --gutter-inline: clamp(16px, 4vw, 40px);
-  --section-margin-block: 3rem;
-}
-
-/* bloc central desktop */
-.right-side section{
-  margin-block-end: var(--section-margin-block);
+.main-centered {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding-inline: var(--gutter-inline);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ------------- RESPONSIVE 0 – 1024 px ------------- */
-@media (max-width:1024px){
-  body{
-    
-    flex-direction: column;
-  }
+.main-centered > section {
+  width: 100%;
+  margin-bottom: var(--section-gap);
+}
 
-  
-  .left-side{
-    position: static;
-    width: 100%;
-    height: auto;
-    padding-inline: var(--gutter-inline);
-    padding-block: 2rem;
-  }
 
-  .right-side{
-    width: 100%;
-    margin-left: 0;
-    overflow: visible;    
+@media (max-width: 1024px) {
+  .main-centered {
+    padding-inline: min(4vw, 20px);
   }
-
-  .right-side section{
-    margin-block-end: calc(var(--section-margin-block) * .75); 
-    padding-inline: var(--gutter-inline);
+  .main-centered > section {
+    margin-bottom: calc(var(--section-gap) * 0.7);
   }
 }

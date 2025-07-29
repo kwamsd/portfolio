@@ -1,7 +1,9 @@
 .content-section {
-    margin: 30px;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto 2rem auto;
     background-color: rgba(255, 255, 255, 0);
-    padding: 20px;
+    /* padding: 20px; */
 }
 .contact-title {
     font-size: 2rem;
@@ -31,13 +33,21 @@
     height: 105px;
     background-color: rgb(0, 0, 0);
     box-shadow: 5px 5px rgb(255, 0, 0);
+    border-radius: var(--radius);
     font-size: 3.5rem;
     text-align: center;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 0.4s ease-in-out;
+    transition: 
+      box-shadow 0.4s cubic-bezier(.26,1.34,.49,.98),
+      transform 0.2s cubic-bezier(.26,1.34,.49,.98);
     border: 2px solid rgb(255, 255, 255);
+}
+
+.network div i:hover {
+    transform: scale(1.13) rotate(-6deg);
+    box-shadow: 10px 10px 0 rgb(255, 0, 0), 0 4px 30px #0003;
 }
 
 .network div a {
@@ -103,7 +113,8 @@
 }
 
 .CV button:hover {
-    color: #ffffff;
+    color: #fff;
+    text-shadow: 0 0 12px #ff0000cc, 0 2px 6px #ff4e4e88;
 }
 
 .CV button:hover::before {

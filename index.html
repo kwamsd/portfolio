@@ -44,10 +44,9 @@
 
     <link rel="shortcut icon" href="./images/logo-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables-fonts.css">
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/layout/layout.css">
-    <link rel="stylesheet" href="css/layout/navigation.css">
-    <link rel="stylesheet" href="css/layout/titles.css">
+    <link rel="stylesheet" href="css/layout/header.css">
     <link rel="stylesheet" href="css/layout/footer.css">
     <link rel="stylesheet" href="css/section-home/bio.css">
     <link rel="stylesheet" href="css/section-home/skills.css">
@@ -55,6 +54,7 @@
     <link rel="stylesheet" href="css/section-home/contact.css">
     <link rel="stylesheet" href="css/animation-stickman/world-popup.css">
     <link rel="stylesheet" href="css/animation-stickman/animation.css">
+    <!-- <link rel="stylesheet" href="css/layout/mordern-override.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
@@ -66,19 +66,36 @@
 
 <body>
     <div id="video-modal" class="modal" style="display:none;">
-    <div class="modal-content">
-        <span class="close-modal" id="close-modal">&times;</span>
-        <h2 id="modal-title"></h2>
-        <video id="modal-video" controls style="width:100%;max-height:60vh;background:#000;"></video>
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <video id="modal-video" controls style="width:100%;max-height:60vh;background:#000;"></video>
+        </div>
     </div>
-</div>
-    <header class="left-side">
-        <section class="left-side-titres">
-            <h1>Kwameh DHEGBO</h1>
-            <h2>Étudiant en developpement Web et Application à <a href="https://www.efrei.fr/">l'EFREI PARIS.</a>
-            </h2>
-            <h3 id="typed-text" class="typed-text"></h3>
-        </section>
+    <header>
+        <div class="header-card">
+            <div class="header-bg"></div>
+            <div class="header-layers">
+                <div class="header-layer" style="--index:1"></div>
+                <div class="header-layer" style="--index:2"></div>
+                <div class="header-layer" style="--index:3"></div>
+            </div>
+            <div class="header-content">
+                <h1 class="header-title">KWAMEH<br>DHEGBO</h1>
+                <div class="header-separator"></div> 
+                <div class="header-infos">
+                    <p>
+                        Étudiant en développement web à
+                        <a href="https://www.efrei.fr/" target="_blank">l'EFREI Paris</a>
+                    </p>
+                    <p id="typed-text" class="typed-text"></p>
+                    <p><i class="fa-solid fa-location-dot"></i> Paris</p>
+                    <div class="alternant-tag">
+                        <span class="dot"></span> Vous cherchez un alternant ?
+                    </div>
+                </div>
+            </div>
+        </div>
         <nav class="left-side-nav">
             <ul>
                 <li><a href="#bio" class="active">BIO</a></li>
@@ -88,7 +105,7 @@
             </ul>
         </nav>
     </header>
-    <main class="right-side">
+    <main class="main-centered">
         <section class="bio" id="bio">
             <p class="bio-titre">Salut,</p>
             <p class="bio-text">
@@ -304,6 +321,14 @@
     </div>
     <script src="./script/script-home.js"></script>
     <script src="./script/script.js"></script>
+    <script>
+        window.addEventListener('mousemove', e => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+            document.documentElement.style.setProperty('--x', x);
+            document.documentElement.style.setProperty('--y', y);
+        });
+    </script>
 </body>
 
 </html>

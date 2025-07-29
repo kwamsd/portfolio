@@ -1,0 +1,94 @@
+/* modern-override.css — à placer APRÈS vos fichiers actuels
+   Donne un style cohérent, moderne et responsive à l’ensemble du portfolio,
+   abandonne la disposition 40 / 60 et ajoute le tag « Vous cherchez un alternant ?»
+   -------------------------------------------------------------- */
+
+:root{
+  --accent-red:#ff0000;
+  --accent-green:#00ff26;
+  --max-width:1200px;
+  --radius:12px;
+  --gutter-inline:clamp(16px,4vw,40px); /* sécurité si non défini */
+}
+
+
+/* ---- Contact ------------------------------------------------- */
+.content-section{
+  max-width:900px;
+  margin-inline:auto;
+  background:#fff;
+  border:2px solid #000;
+  padding:clamp(24px,4vw,40px);
+  border-radius:var(--radius);
+  box-shadow:6px 6px 0 var(--accent-red);
+}
+
+.contact-title{
+  color:#000;
+  font-size:clamp(1.6rem,4vw,2rem);
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+}
+
+.network{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:clamp(16px,4vw,32px);
+  padding:0;
+}
+
+.network div i{
+  width:64px;
+  height:64px;
+  font-size:2rem;
+  background:#000;
+  color:#fff;
+  border:2px solid #000;
+  box-shadow:4px 4px 0 var(--accent-red);
+  transition:all .3s;
+}
+
+.network div:hover i{
+  transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 var(--accent-red);
+}
+
+.network div a{
+  font-size:.85rem;
+  color:#000;
+  margin-top:8px;
+  text-transform:uppercase;
+  font-family:"Inter",sans-serif;
+}
+
+.network div a:hover{color:var(--accent-red);} 
+
+.CV p{
+  color:#000;
+  font-size:.9rem;
+}
+
+.CV button{
+  border:2px solid #000;
+  color:#000;
+  background:#fff;
+  box-shadow:4px 4px 0 var(--accent-red);
+  padding:16px 40px;
+  transition:all .3s;
+}
+
+.CV button:hover{
+  transform:translate(-2px,-2px);
+  background:var(--accent-red);
+  color:#fff;
+  box-shadow:6px 6px 0 var(--accent-red);
+}
+
+/* ---- Footer -------------------------------------------------- */
+footer{
+  background:#fff;
+  border-top:2px solid #000;
+}
+
+/* Ajouts responsives gérés par les max‑widths centraux */

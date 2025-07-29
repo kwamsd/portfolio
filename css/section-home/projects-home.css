@@ -26,8 +26,10 @@
 .projects {
     display: flex;
     flex-direction: column;
-    margin: 30px;
-    padding: 10px 10%;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto 2rem auto;
+    /* padding: 10px 10%; */
     background: transparent;
 }
 
@@ -48,7 +50,7 @@
     padding: 40px 10px;
     margin-top: 10px;
     gap: 30px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .projects-card {
@@ -58,6 +60,7 @@
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 8px 8px 0px rgb(255, 0, 0);
+    border-radius: var(--radius);
     transition: all 0.3s ease-in-out;
     box-sizing: border-box;
     padding: 20px;
@@ -272,6 +275,7 @@
     background: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 6px 6px 0px rgb(255, 0, 0);
+    border-radius: var(--radius);
     display: flex;
     align-items: center;
     justify-content: center;
