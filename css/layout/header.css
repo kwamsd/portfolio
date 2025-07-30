@@ -18,7 +18,7 @@ header {
   aspect-ratio: 2/1.1;
   border-radius: 2.2em;
   overflow: hidden;
-  box-shadow: 0 6px 38px #0002, 8px 8px 0 #000;
+  box-shadow: 0 6px 38px rgba(208, 20, 20, 0.508), 8px 8px 0 #000;
   border: 2px solid #000000;
   background: #fff;
   display: flex;
@@ -29,17 +29,12 @@ header {
 .header-bg {
   position: absolute;
   inset: 0;
-  /* background:
-    rgba(0, 0, 0, 0.064),
-    url(../../images/bg_bresil.jpg); */
   background-image:
     url('../../images/bg_gradient.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* opacity: 1.58; */
   filter: blur(7px);
-  /* transition: opacity .3s; */
 }
 
 .header-layers {
@@ -56,7 +51,6 @@ header {
   position: absolute;
   inset: 0;
   background: hsl(0 0% 60% / 0.03);
-  /* backdrop-filter: blur(min(calc(var(--blur) * 1px), 5px)); */
   mask: radial-gradient(180% 160% at 45% 90%, #fff 10%, #0000 calc((10 + var(--stop)) * 1%));
 }
 
@@ -120,9 +114,6 @@ header {
   transition: color 0.2s;
 }
 
-/* .header-infos a:hover {
-  color: var(--accent-red);
-} */
 
 .typed-text {
   color: #000000;

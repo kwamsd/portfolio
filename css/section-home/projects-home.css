@@ -1,10 +1,17 @@
+/*affichage des videos*/
 .modal {
     position: fixed;
     z-index: 9999;
-    left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.6);
-    display: flex; align-items: center; justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .modal-content {
     background: #fff;
     padding: 1.5rem 1rem 1rem 1rem;
@@ -13,24 +20,50 @@
     min-width: 320px;
     max-width: 96vw;
     box-shadow: 0 8px 40px #0006;
-    animation: popup 0.25s cubic-bezier(.68,-0.55,.27,1.55);
+    animation: popup 0.25s cubic-bezier(.68, -0.55, .27, 1.55);
 }
-@keyframes popup { 0% {transform: scale(0.7);} 100% {transform: scale(1);} }
+
+@keyframes popup {
+    0% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .close-modal {
-    position: absolute; top: 8px; right: 16px; font-size: 2rem;
-    color: #333; cursor: pointer; font-weight: bold;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
     transition: color 0.2s;
 }
-.close-modal:hover { color: #f00; }
-#modal-title { font-size: 1.1rem; margin-bottom: 1rem; text-align: center; }
+
+.close-modal:hover {
+    color: #f00;
+}
+
+#modal-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+/*styles de la section projet*/
 .projects {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto 2rem auto;
     /* padding: 10px 10%; */
     background: transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-title {
@@ -50,8 +83,9 @@
     padding: 40px 10px;
     margin-top: 10px;
     gap: 30px;
-  border-radius:var(--radius);
-    /* border: 2px solid black; */
+    border-radius: var(--radius);
+    border: 2px solid black;
+    background: #5a5a5a47;
 }
 
 .projects-card {
@@ -86,10 +120,6 @@
     /* box-shadow: 4px 4px 0px rgb(255, 0, 0); */
     transition: all 0.3s ease-in-out;
 }
-
-/* .projects-img:hover {
-    box-shadow: 6px 6px 0px rgb(255, 0, 0);
-} */
 
 .projects-img img {
     width: 100%;
@@ -159,7 +189,7 @@
 }
 
 .projects-text p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--fontTerminal);
     color: rgb(0, 0, 0);
     font-size: 0.95rem;
     text-align: justify;
@@ -354,13 +384,14 @@
     background: rgb(200, 0, 0);
 }
 
-/* Responsive adjustments */
+
+/* Responsive */
 @media (max-width: 1024px) {
     .projects {
         margin-inline: 0;
         padding-inline: var(--gutter-inline);
     }
-    
+
     .projects-card {
         flex-direction: column;
         width: 100%;
@@ -368,25 +399,25 @@
         padding: 16px;
         box-shadow: 6px 6px 0px rgb(255, 0, 0);
     }
-    
+
     .projects-card:hover {
         transform: translate(-1px, -1px);
         box-shadow: 8px 8px 0px rgb(255, 0, 0);
     }
-    
+
     .projects-img {
         order: 1;
         width: 100%;
         height: 180px;
         margin-bottom: 12px;
     }
-    
+
     .projects-description {
         flex-direction: column;
         gap: 12px;
         width: 100%;
     }
-    
+
     .projects-stack {
         flex-direction: row;
         flex-wrap: wrap;
@@ -394,7 +425,7 @@
         padding: 8px;
         width: 100%;
     }
-    
+
     .projects-stack p {
         font-size: 0.6rem;
         padding: 6px 8px;
@@ -403,33 +434,33 @@
         border: 1px solid rgb(255, 255, 255);
         width: auto;
     }
-    
+
     .projects-text {
         width: 100%;
     }
-    
+
     .projects-text p {
         font-size: 0.9rem;
     }
-    
+
     .projects-links {
         order: 3;
         width: 100%;
         justify-content: center;
         margin-top: 12px;
     }
-    
+
     .projects-links button {
         width: 40px;
         height: 40px;
         box-shadow: 3px 3px 0px rgb(255, 0, 0);
     }
-    
+
     .projects-links button:hover {
         transform: translate(-1px, -1px);
         box-shadow: 4px 4px 0px rgb(255, 0, 0);
     }
-    
+
     .projects-slide {
         flex-direction: column;
         overflow: visible;
@@ -437,11 +468,11 @@
         padding: 0;
         margin-top: 0;
     }
-    
+
     .pagination {
         display: none !important;
     }
-    
+
     .bouton-all-projects {
         /* width: 100%; */
         margin-top: 2rem;
@@ -449,7 +480,7 @@
         font-size: 0.85rem;
         box-shadow: 4px 4px 0px rgb(255, 0, 0);
     }
-    
+
     .bouton-all-projects:hover {
         transform: translate(-1px, -1px);
         box-shadow: 6px 6px 0px rgb(255, 0, 0);

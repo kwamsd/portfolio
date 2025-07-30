@@ -19,7 +19,7 @@ document.getElementById('video-modal').onclick = function (e) {
 window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
 // ========== fetch du JSON, 4 projets randoms injectés dans index.html
-fetch('../projects.json')
+fetch('../data/projects.json')
   .then(res => res.json())
   .then(projects => {
 

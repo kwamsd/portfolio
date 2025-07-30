@@ -34,7 +34,7 @@ function toggleDetails(row) {
 }
 
 // ========== fetch et génération du tableau
-fetch('../projects.json')
+fetch('../data/projects.json')
   .then(res => res.json())
   .then(projects => {
     const container = document.getElementById('projects-list');

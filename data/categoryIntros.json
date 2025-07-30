@@ -1,0 +1,22 @@
+{
+  "all": {
+    "title": "Toutes mes compétences",
+    "description": "Un aperçu complet de toutes mes compétences techniques et humaines"
+  },
+  "frontend": {
+    "title": "Développement Frontend",
+    "description": "Technologies pour créer des interfaces utilisateur modernes et interactives"
+  },
+  "backend": {
+    "title": "Développement Backend",
+    "description": "Serveurs, bases de données et APIs pour des applications robustes"
+  },
+  "tools": {
+    "title": "Outils & Technologies",
+    "description": "Environnements de développement et outils de collaboration"
+  },
+  "soft": {
+    "title": "Compétences Humaines",
+    "description": "Qualités personnelles et méthodes de travail en équipe"
+  }
+}

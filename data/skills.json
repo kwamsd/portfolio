@@ -1,0 +1,34 @@
+{
+  "skills": {
+    "all": [
+      { "name": "Vue.js",      "icon": "fa-brands fa-vuejs",     "category": "frontend" },
+      { "name": "AlpineJS",   "icon": "fa-solid fa-feather",  "category": "frontend" },
+      { "name": "Three.js",   "icon": "fa-solid fa-cube",     "category": "frontend" },
+      { "name": "Symfony",    "icon": "fa-brands fa-symfony",  "category": "backend" },
+      { "name": "Node.js",    "icon": "fa-brands fa-node-js", "category": "backend" },
+      { "name": "PostgreSQL", "icon": "fa-solid fa-database", "category": "backend" },
+      { "name": "API REST",   "icon": "fa-solid fa-code-branch","category": "backend" },
+      { "name": "Git / GitHub","icon": "fa-brands fa-github",  "category": "tools" },
+      { "name": "Docker",     "icon": "fa-brands fa-docker",  "category": "tools" },
+      { "name": "Figma",      "icon": "fa-brands fa-figma",   "category": "tools" },
+      { "name": "Méthodique", "icon": "fa-solid fa-check",    "category": "soft" },
+      { "name": "Fiable",     "icon": "fa-solid fa-handshake","category": "soft" },
+      { "name": "Adaptabilité","icon": "fa-solid fa-sync-alt", "category": "soft" },
+      { "name": "Agile (Scrum)","icon": "fa-solid fa-users-cog","category": "soft" }
+    ],
+    "frontend": [ { "name": "Vue.js",      "icon": "fa-brands fa-vuejs" },
+                  { "name": "AlpineJS",   "icon": "fa-solid fa-feather" },
+                  { "name": "Three.js",   "icon": "fa-solid fa-cube" } ],
+    "backend":  [ { "name": "Symfony",    "icon": "fa-brands fa-symfony" },
+                  { "name": "Node.js",    "icon": "fa-brands fa-node-js" },
+                  { "name": "PostgreSQL", "icon": "fa-solid fa-database" },
+                  { "name": "API REST",   "icon": "fa-solid fa-code-branch" } ],
+    "tools":    [ { "name": "Git / GitHub","icon": "fa-brands fa-github" },
+                  { "name": "Docker",     "icon": "fa-brands fa-docker" },
+                  { "name": "Figma",      "icon": "fa-brands fa-figma" } ],
+    "soft":     [ { "name": "Méthodique","icon": "fa-solid fa-check" },
+                  { "name": "Fiable",     "icon": "fa-solid fa-handshake" },
+                  { "name": "Adaptabilité","icon": "fa-solid fa-sync-alt" },
+                  { "name": "Agile (Scrum)","icon": "fa-solid fa-users-cog" } ]
+  }
+}

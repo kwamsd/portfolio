@@ -1,7 +1,5 @@
 footer {
-    /* background: rgba(126, 126, 126, 0.092); */
     background: transparent;
-
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto 2rem auto;

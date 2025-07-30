@@ -130,72 +130,45 @@
                 <strong>créer des choses utiles et bien faites</strong>.
             </p>
         </section>
-        <section class="skills-new" id="competences">
-            <h2 class="skills-new-title">MES COMPÉTENCES CLÉS</h2>
-            <div class="skills-badges">
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-vuejs"></i></span>
-                    <span>Vue.js</span>
+        <section class="skills" id="competences">
+        <p class="skills-title">Mes compétences</p>
+        
+        <div class="skills-window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control-dot close"></div>
+                    <div class="control-dot minimize"></div>
+                    <div class="control-dot maximize"></div>
                 </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-github"></i></span>
-                    <span>Git / GitHub</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-symfony"></i></span>
-                    <span>Symfony</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-node-js"></i></span>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-figma"></i></span>
-                    <span>Figma</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-feather"></i></span>
-                    <span>AlpineJS</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-database"></i></span>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-brands fa-docker"></i></span>
-                    <span>Docker</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-code-branch"></i></span>
-                    <span>API REST</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-cube"></i></span>
-                    <span>Three.js</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-users-cog"></i></span>
-                    <span>Agile (Scrum)</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-check"></i></span>
-                    <span>Méthodique</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-handshake"></i></span>
-                    <span>Fiable</span>
-                </div>
-                <div class="skill-badge">
-                    <span class="icon"><i class="fa-solid fa-sync-alt"></i></span>
-                    <span>Adaptabilité</span>
-                </div>
+                <div class="window-title">Explorateur de Compétences</div>
+                
             </div>
-            <p class="skills-desc">
-                Des savoir-faire et des savoir-être acquis au fil de <span onclick="location.href='#CV'"
-                    class="desc-link">mes expériences</span>, que je mets en pratique et continue de développer au
-                quotidien.
-            </p>
-        </section>
+            
+            <div class="categories-filter">
+                <button class="category-btn" data-category="all">Toutes</button>
+                <button class="category-btn" data-category="frontend">Frontend</button>
+                <button class="category-btn" data-category="backend">Backend</button>
+                <button class="category-btn" data-category="tools">Outils</button>
+                <button class="category-btn" data-category="soft">Soft Skills</button>
+            </div>
+            
+            <div class="skills-content" id="skillsContent">
+                <div class="default-message" id="defaultMessage">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    <h3>Choisissez une catégorie</h3>
+                    <p>Sélectionnez une catégorie ci-dessus pour découvrir mes compétences dans ce domaine</p>
+                </div>
+                
+                <div class="category-intro" id="categoryIntro"></div>
+                <div class="skills-grid" id="skillsGrid"></div>
+            </div>
+        </div>
+
+        <p class="skills-text">
+            Des savoir-faire et des savoir-être que j'ai acquis au fil de <span onclick="location.href='#CV'">mes expériences</span>,
+            que je mets en pratique et continue de développer au quotidien.
+        </p>
+    </section>
 
         <section class="projects" id="projets">
             <p class="projects-title">Mes projets</p>
@@ -213,7 +186,7 @@
 
         <section id="contact" class="content-section">
 
-            <p class="contact-title">où me trouver</p>
+            <p class="contact-title">où me trouver ?</p>
             <div class="network">
                 <div><i class="fa-brands fa-linkedin"
                         onclick="window.open('https://www.linkedin.com/in/kwameh-dhegbo-9b779420a/', '_blank')"></i><a
