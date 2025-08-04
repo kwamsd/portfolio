@@ -3,21 +3,23 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto 2rem auto;
+    font-family: var(--fontTerminal);
 }
 
 .skills-title {
     font-size: 2rem;
     margin: 2em 0 1em 0;
     font-weight: 500;
-    color: rgb(0, 0, 0);
+    color: var(--text-color2);
     text-transform: uppercase;
     text-align: center;
+    font-family: var(--fontMono);
 }
 
 /* Main Skills */
 .skills-window {
-    background: #fff;
-    border: 3px solid #000;
+    /* background: var(--bg-color2); */
+    border: 3px solid var(--border-color2);
     border-radius: var(--radius);
     box-shadow: 8px 8px 0 var(--accent-red);
     overflow: hidden;
@@ -31,7 +33,7 @@
 
 /* Window Header */
 .window-header {
-    background: #333;
+    background: var(--bg-color4);
     color: #fff;
     padding: 15px 20px;
     border-bottom: 3px solid #555;
@@ -46,7 +48,8 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-left: 1em;
-    font-family: var(--fontMono);
+    font-family:var(--fontMono);
+    /* font-family: var(--fontMono); */
 }
 
 .window-controls {
@@ -74,7 +77,7 @@
 
 /* Categories Filter */
 .categories-filter {
-    background: #000000;
+    background: var(--bg-color3);
     padding: 20px;
     border-bottom: 1px solid #ffffff29;
     display: flex;
@@ -86,39 +89,30 @@
 .category-btn {
     background: transparent;
     color: var(--accent-green);
-    /* border: 2px solid #ffffff; */
     border: none;
     padding: 12px 24px;
-    /* border-radius: var(--radius); */
-    font-family: var(--fontMono);
+    font-family: var(--fontTerminal);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* box-shadow: 4px 4px 0 var(--accent-red); */
     letter-spacing: 0.5px;
 }
 
 .category-btn:hover {
-    /* background: var(--accent-red); */
     color: #fff;
-    /* transform: translate(-2px, -2px); */
-    /* box-shadow: 6px 6px 0 #ffffff; */
-    /* border: 2px solid rgba(255, 0, 0, 0); */
 }
 
 .category-btn.active {
-    /* background: var(--accent-red); */
     color: #0095ff;
-    /* box-shadow: 4px 4px 0 #000; */
 }
 
 /* Skills Content Area */
 .skills-content {
     padding: 30px;
     min-height: 300px;
-    background: #000000;
+    background: var(--bg-color3);
 }
 
 .category-intro {
@@ -137,6 +131,7 @@
 .category-intro h3 {
     font-size: 1.3rem;
     color: var(--accent-red);
+    font-family: var(--fontMono);
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 700;
@@ -202,7 +197,6 @@
     color: #ffffff;
     font-size: 0.7rem;
     text-transform: none;
-    font-family: var(--fontTerminal);
 }
 
 /* Default State */

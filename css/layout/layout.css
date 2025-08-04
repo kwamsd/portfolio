@@ -2,7 +2,10 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -11,10 +14,17 @@ body {
   font-family: var(--fontMono);
   /* background-image: url(../../images/noise-bg.png); */
   background: #fffced;
+  /* background: #000000; */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: #222;
+  cursor: url("https://cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/671251b239d7aeb290a31ac5_cursor-default%402x.svg") 2 0, auto;
+  /* cursor: url("https://cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/671251b212e6b71494aa67ff_cursor-pointer%402x.svg") 2, 0, pointer; */
+}
+body a,
+body button{
+  cursor: url("https://cdn.prod.website-files.com/6708f85ff3d3cba6aff436fb/671251b212e6b71494aa67ff_cursor-pointer%402x.svg") 2, 0, pointer;
 }
 
 .main-centered {
@@ -27,7 +37,7 @@ body {
   align-items: center;
 }
 
-.main-centered > section {
+.main-centered>section {
   width: 100%;
   margin-bottom: var(--section-gap);
 }
@@ -37,7 +47,8 @@ body {
   .main-centered {
     padding-inline: min(4vw, 20px);
   }
-  .main-centered > section {
+
+  .main-centered>section {
     margin-bottom: calc(var(--section-gap) * 0.7);
   }
 }

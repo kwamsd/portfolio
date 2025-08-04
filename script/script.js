@@ -137,53 +137,61 @@ let categoryIntros = {};
 
 // Charger les JSON externes avant l'initialisation
 Promise.all([
-  fetch('../data/skills.json').then(res => res.json()),
-  fetch('../data/categoryIntros.json').then(res => res.json())
+    fetch('../data/skills.json').then(res => res.json()),
+    fetch('../data/categoryIntros.json').then(res => res.json())
 ]).then(([skillsData, introsData]) => {
-  skills = skillsData.skills;
-  categoryIntros = introsData;
-  initSkillSimulator();
+    skills = skillsData.skills;
+    categoryIntros = introsData;
+    initSkillSimulator();
 });
 
 function initSkillSimulator() {
-  const defaultMessage = document.getElementById('defaultMessage');
-  const categoryIntro = document.getElementById('categoryIntro');
-  const skillsGrid = document.getElementById('skillsGrid');
-  const categoryBtns = document.querySelectorAll('.category-btn');
+    const defaultMessage = document.getElementById('defaultMessage');
+    const categoryIntro = document.getElementById('categoryIntro');
+    const skillsGrid = document.getElementById('skillsGrid');
+    const categoryBtns = document.querySelectorAll('.category-btn');
 
-  function showCategory(category) {
-    categoryBtns.forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`[data-category="${category}"]`).classList.add('active');
-    defaultMessage.style.display = 'none';
+    function showCategory(category) {
+        categoryBtns.forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`[data-category="${category}"]`).classList.add('active');
+        defaultMessage.style.display = 'none';
 
-    const intro = categoryIntros[category];
-    categoryIntro.innerHTML = `
+        const intro = categoryIntros[category];
+        categoryIntro.innerHTML = `
       <h3>${intro.title}</h3>
       <p>${intro.description}</p>
     `;
-    categoryIntro.classList.add('active');
+        categoryIntro.classList.add('active');
 
-    skillsGrid.innerHTML = '';
-    skills[category].forEach((skill, index) => {
-      const card = document.createElement('div');
-      card.className = 'skill-card';
-      card.style.animationDelay = `${index * 0.1}s`;
-      card.innerHTML = `
+        skillsGrid.innerHTML = '';
+        skills[category].forEach((skill, index) => {
+            const card = document.createElement('div');
+            card.className = 'skill-card';
+            card.style.animationDelay = `${index * 0.1}s`;
+            card.innerHTML = `
         <div class="skill-icon"><i class="${skill.icon}"></i></div>
         <div class="skill-name">${skill.name}</div>
       `;
-      skillsGrid.appendChild(card);
-    });
+            skillsGrid.appendChild(card);
+        });
 
-    setTimeout(() => skillsGrid.classList.add('active'), 200);
-  }
+        setTimeout(() => skillsGrid.classList.add('active'), 200);
+    }
 
-  categoryBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-      const category = e.target.dataset.category;
-      categoryIntro.classList.remove('active');
-      skillsGrid.classList.remove('active');
-      setTimeout(() => showCategory(category), 100);
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', e => {
+            const category = e.target.dataset.category;
+            categoryIntro.classList.remove('active');
+            skillsGrid.classList.remove('active');
+            setTimeout(() => showCategory(category), 100);
+        });
     });
-  });
 }
+
+document.querySelectorAll('.lift').forEach(el => {
+    const chars = el.textContent.split('');
+    el.innerHTML = chars.map(char => {
+        const safeChar = char === ' ' ? '&nbsp;' : char;
+        return `<span class="letter">${safeChar}</span>`;
+    }).join('');
+});
