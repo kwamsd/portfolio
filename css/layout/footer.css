@@ -86,3 +86,11 @@ footer {
         display: none;
     }
 }
+@media (max-width:425px) {
+    .green-button-footer{
+        display: none;
+    }
+    footer{
+        padding-bottom: 1.5rem;
+    }
+}

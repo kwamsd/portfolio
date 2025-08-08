@@ -1,68 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projets – Kwameh DHEGBO</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets — Kwameh DHEGBO</title>
+  <meta name="description" content="Tous mes projets (frontend, backend, full-stack, mobile, API) avec filtres et liens." />
 
-  <meta name="description"
-    content="Liste complète des projets techniques de Kwameh DHEGBO : front-end, back-end, full-stack, mobile et API.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://kwamehdhegbo.com/html/projets.html">
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/page-projet/style-page-projet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
-  <meta property="og:title" content="Projets – Kwameh DHEGBO">
-  <meta property="og:description"
-    content="Explorez mes réalisations : sites web, applications, services API et encore.">
-  <meta property="og:url" content="https://kwamehdhegbo.com/html/projets.html">
-  <meta property="og:type" content="website">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Projets de portfolio",
-    "itemCount": 9,
-    "url": "https://kwamehdhegbo.com/html/projets.html"
-  }
-  </script>
-
-  <link rel="shortcut icon" href="../images/logo-icon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/page-projet/style-page-projet.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" href="../images/logo-icon.ico" />
 </head>
-
 <body>
-  <div id="video-modal" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="close-modal" id="close-modal">&times;</span>
-      <h2 id="modal-title"></h2>
-      <video id="modal-video" controls style="width:100%;max-height:60vh;background:#000;"></video>
-    </div>
-  </div>
-  <a href="../index.html" class="back-link"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Accueil</a>
-  <div class="header">
-    <h1>Mes Projets</h1>
-    <p>Une liste complète de mes réalisations techniques</p>
-  </div>
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">Tous</button>
-    <button class="filter-btn" data-filter="web">Site Web</button>
-    <button class="filter-btn" data-filter="api">API</button>
-    <button class="filter-btn" data-filter="fullstack">Full&nbsp;Stack</button>
-    <button class="filter-btn" data-filter="frontend">Frontend</button>
-    <button class="filter-btn" data-filter="java">Java</button>
-    <button class="filter-btn" data-filter="android">Android</button>
-    <button class="filter-btn" data-filter="php">PHP</button>
-  </div>
-  <div class="projects-container">
-    <div class="projects-list" id="projects-list">
-      <div class="list-header">
-        <span> </span><span>#</span><span>Projet</span><span>Technologies</span><span>Statut</span><span>Liens</span>
+  <a class="back-link" href="../index.html" aria-label="Retour à l’accueil">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i><span>Accueil</span>
+  </a>
+
+  <header class="page-header container">
+    <h1 class="title">Mes Projets</h1>
+    <p class="subtitle">Liste complète et filtrable de mes réalisations.</p>
+
+    <div class="toolbar">
+      <div class="filters" id="filters" role="tablist" aria-label="Filtres de catégories">
+      </div>
+
+      <div class="tools">
+        <label class="sr-only" for="q">Recherche</label>
+        <input id="q" class="search" type="search" placeholder="Rechercher un projet…" autocomplete="off" />
+        <select id="sort" class="sort" aria-label="Trier les projets">
+          <option value="id-asc"># croissant</option>
+          <option value="id-desc"># décroissant</option>
+          <option value="title-asc">Titre A→Z</option>
+          <option value="title-desc">Titre Z→A</option>
+          <option value="status">Statut (Terminé d’abord)</option>
+        </select>
       </div>
     </div>
-  </div>
-  <script src="../script/script-projet.js"></script>
-</body>
+  </header>
 
+  <main class="container">
+    <section id="grid" class="grid" aria-live="polite">
+    </section>
+  </main>
+
+  <dialog id="videoModal" class="modal" aria-label="Démonstration vidéo">
+    <button class="modal-close" id="closeModal" aria-label="Fermer la vidéo">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <h2 class="modal-title" id="modalTitle"></h2>
+    <video id="modalVideo" controls playsinline preload="metadata"></video>
+  </dialog>
+
+  <script src="../script/script-projet.js" defer></script>
+</body>
 </html>
